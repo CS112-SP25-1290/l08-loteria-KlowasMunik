@@ -10,17 +10,17 @@
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-   <children>
-      <Label id="titleLabel" text="Loteria Card Game">
-         <font>
-            <Font size="24.0" />
-         </font></Label>
-      <ImageView id="cardImageView" fitHeight="240.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <Label id="messageLabel" text="Label" />
-      <Button id="drawCardButton" mnemonicParsing="false" text="Draw Card">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-      <ProgressBar id="gameProgressBar" prefWidth="200.0" progress="0.0" />
-   </children>
+  <children>
+    <Label id="titleLabel" text="Loteria Card Game">
+      <font>
+        <Font size="24.0" />
+      </font></Label>
+    <ImageView id="cardImageView" fitHeight="240.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+    <Label id="messageLabel" text="Label" />
+    <Button id="drawCardButton" mnemonicParsing="false" text="Draw Card">
+      <font>
+        <Font size="18.0" />
+      </font></Button>
+    <ProgressBar id="gameProgressBar" prefWidth="200.0" progress="0.0" />
+  </children>
 </VBox>
