@@ -5,40 +5,15 @@ import javafx.scene.image.Image;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-/* UML CLASS DIAGRAM:
------------------------------------------
-LoteriaCard
------------------------------------------
-- cardName : String
-- imageName : String
-- cardNum : int
------------------------------------------
-+ LoteriaCard(cardName : String, imageName : String, cardNum : int)
-+ LoteriaCard(original : LoteriaCard)
-+ setAll(cardName : String, imageName : String, cardNum : int)
-+ getCardName() : String
-+ setCardName(cardName : String) : void
-+ getImageName() : String
-+ getImage() : Image
-+ setImageName(imageName : String) : void
-+ getCardNum() : int
-+ setCardNum(carNum : int) : void
-+ toString() : String
------------------------------------------
-*/
-
 public class LoteriaCard {
-    // INSTANCE VARIABLES
     private String cardName = "";
     private String imageName = "";
     private int cardNum = 0;
 
-    //Constructor
     public LoteriaCard(String cardName, String imageName, int cardNum) {
         this.setAll(cardName, imageName, cardNum);
     }
 
-    //Copy constructor with error checking for null values
     public LoteriaCard(LoteriaCard original) {
         if (original != null) {
             this.setAll(original.cardName, original.imageName, original.cardNum);
@@ -48,12 +23,10 @@ public class LoteriaCard {
         }
     }
 
-    //default constructor creates false loteria card (like Joker cards in a 52 card standard deck)
     public LoteriaCard() {
         this("EChALE STEM Logo", "0.png", 0);
     }
 
-    // get/set methods
     public void setAll(String cardName, String imageName, int cardNum) {
         this.setCardName(cardName);
         this.setImageName(imageName);
@@ -72,11 +45,6 @@ public class LoteriaCard {
         return this.imageName;
     }
 
-    /**
-     * Gets Image object for this card by reading it from the appropriate location in a replit project
-     *
-     * @return returns Image object that can be used to display it in an ImageView in GUI
-     **/
     public Image getImage() {
         FileInputStream input = null;
         try {
@@ -101,13 +69,11 @@ public class LoteriaCard {
         this.cardNum = cardNum;
     }
 
-    //toString method
     @Override
     public String toString() {
         return "Loteria Card #" + this.cardNum + ": " + this.cardName + "(" + this.imageName + ")";
     }
 
-    //Equals method
     @Override
     public boolean equals(Object o) {
         if (o instanceof LoteriaCard other) {
